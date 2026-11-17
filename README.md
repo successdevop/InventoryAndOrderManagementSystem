@@ -1,2 +1,2 @@
-# SmartInventoryAndOrderManagementSystem_SIOM
+# Smart Inventory And OrderManagement System (SIOM)
 A complete inventory and order management application that allows businesses to manage products, warehouses, stock levels, suppliers, customers, purchases, sales, and orders.
