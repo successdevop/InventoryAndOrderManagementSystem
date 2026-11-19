@@ -1,4 +1,4 @@
-package com.SIOM.enums;
+package com.sioms.enums;
 
 public enum CustomerType{
     INDIVIDUAL, BUSINESS

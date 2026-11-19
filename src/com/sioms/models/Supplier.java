@@ -1,4 +1,4 @@
-package com.SIOM.models;
+package com.sioms.models;
 
 import java.util.Objects;
 

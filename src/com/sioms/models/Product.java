@@ -1,6 +1,6 @@
-package com.SIOM.models;
+package com.sioms.models;
 
-import com.SIOM.enums.ProductCategory;
+import com.sioms.enums.ProductCategory;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

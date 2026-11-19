@@ -1,6 +1,6 @@
-package com.SIOM.models;
+package com.sioms.models;
 
-import com.SIOM.enums.CustomerType;
+import com.sioms.enums.CustomerType;
 
 import java.util.Objects;
 
