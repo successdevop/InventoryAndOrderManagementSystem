@@ -10,7 +10,8 @@ public final class Supplier extends User {
     private String paymentTerms;
     private final BusinessEntity businessEntity;
 
-    Supplier(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData, int rating, String paymentTerms, BusinessEntity businessEntity) {
+    Supplier(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
+             int rating, String paymentTerms, BusinessEntity businessEntity) {
         super(id, email, phoneNumber, isActive, address, timestampData);
         this.rating = rating;
         this.paymentTerms = paymentTerms;

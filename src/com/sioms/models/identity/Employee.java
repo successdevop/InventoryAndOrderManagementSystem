@@ -79,7 +79,6 @@ public final class Employee extends User {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", employeeRole=" + employeeRole +
-                ", passwordHash='" + passwordHash + '\'' +
                 ", lastLoginAt=" + lastLoginAt +
                 '}';
     }

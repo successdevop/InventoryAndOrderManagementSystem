@@ -14,7 +14,8 @@ public final class Customer extends User {
     private final BusinessEntity businessEntity;
 
 
-    Customer(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData, CustomerType customerType, BigDecimal totalPurchase, BusinessEntity businessEntity) {
+    Customer(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
+             CustomerType customerType, BigDecimal totalPurchase, BusinessEntity businessEntity) {
         super(id, email, phoneNumber, isActive, address, timestampData);
         this.customerType = customerType;
         this.totalPurchase = totalPurchase;

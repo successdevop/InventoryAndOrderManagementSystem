@@ -1,17 +1,18 @@
 package com.sioms.models.baseModels;
 
 import java.util.Objects;
+import java.util.UUID;
 
 
 public abstract class User {
-    private final String id;
+    private final UUID id;
     private String email;
     private String phoneNumber;
     private boolean isActive;
     private String address;
     private final TimestampData timestampData;
 
-    protected User(String id, String email, String phoneNumber, boolean isActive, String address,
+    protected User(UUID id, String email, String phoneNumber, boolean isActive, String address,
                    TimestampData timestampData){
         this.id = id;
         this.email = email;
@@ -30,7 +31,7 @@ public abstract class User {
         this.timestampData = source.timestampData;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
