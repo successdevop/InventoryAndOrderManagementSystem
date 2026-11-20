@@ -1,7 +1,7 @@
 package com.sioms.models.identity;
 
 import com.sioms.enums.EmployeeRole;
-import com.sioms.interfaces.model.Timestamp;
+import com.sioms.interfaces.model.HasTimestamp;
 import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 
-public final class Employee extends User implements Timestamp {
+public final class Employee extends User implements HasTimestamp {
     private String firstName;
     private String lastName;
     private EmployeeRole employeeRole;

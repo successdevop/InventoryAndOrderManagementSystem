@@ -1,7 +1,7 @@
 package com.sioms.models.identity;
 
 import com.sioms.enums.CustomerType;
-import com.sioms.interfaces.model.Timestamp;
+import com.sioms.interfaces.model.HasTimestamp;
 import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 
-public class Customer extends User implements Timestamp {
+public class Customer extends User implements HasTimestamp {
     private String name;
     private CustomerType customerType;
     private String taxId;
@@ -17,7 +17,7 @@ public class Customer extends User implements Timestamp {
     private String notes;
     private final TimestampData timestamp;
 
-    protected Customer(String id, String email, String phoneNumber, boolean isActive, String address, String name,
+    public Customer(String id, String email, String phoneNumber, boolean isActive, String address, String name,
                        CustomerType customerType, String taxId, BigDecimal totalPurchase, String notes, TimestampData timestamp) {
         super(id, email, phoneNumber, isActive, address);
         this.name = name;
@@ -28,7 +28,7 @@ public class Customer extends User implements Timestamp {
         this.timestamp = timestamp;
     }
 
-    protected Customer(Customer source) {
+    public Customer(Customer source) {
         super(source);
         this.name = source.name;
         this.customerType = source.customerType;
