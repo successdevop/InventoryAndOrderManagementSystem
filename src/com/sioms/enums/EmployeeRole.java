@@ -1,6 +1,6 @@
 package com.sioms.enums;
 
-public enum UserRole{
+public enum EmployeeRole {
     ADMIN,
     INVENTORY_MANAGER,
     SALES_REPRESENTATIVE,
