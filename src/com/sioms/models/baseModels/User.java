@@ -9,13 +9,16 @@ public abstract class User {
     private String phoneNumber;
     private boolean isActive;
     private String address;
+    private final TimestampData timestampData;
 
-    protected User(String id, String email, String phoneNumber, boolean isActive, String address){
+    protected User(String id, String email, String phoneNumber, boolean isActive, String address,
+                   TimestampData timestampData){
         this.id = id;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.isActive = isActive;
         this.address = address;
+        this.timestampData = timestampData;
     }
 
     protected User(User source){
@@ -24,6 +27,7 @@ public abstract class User {
         this.phoneNumber = source.phoneNumber;
         this.isActive = source.isActive;
         this.address = source.address;
+        this.timestampData = source.timestampData;
     }
 
     public String getId() {
@@ -38,12 +42,12 @@ public abstract class User {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public boolean isActive() {
@@ -54,32 +58,39 @@ public abstract class User {
         isActive = active;
     }
 
-    public String getAddress() {
-        return address;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public TimestampData getTimestampData() {
+        return timestampData;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return isActive == user.isActive && Objects.equals(id, user.id) && Objects.equals(email, user.email) && Objects.equals(phoneNumber, user.phoneNumber) && Objects.equals(address, user.address);
+        return Objects.equals(id, user.id) && Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, phoneNumber, isActive, address);
+        return Objects.hash(id, email);
     }
 
     @Override
     public String toString() {
-        return "id='" + id + '\'' +
+        return "User{" +
+                "id='" + id + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", isActive=" + isActive +
-                ", address='" + address + '\'';
+                ", address='" + address + '\'' +
+                ", timestampData=" + timestampData +
+                '}';
     }
 }
