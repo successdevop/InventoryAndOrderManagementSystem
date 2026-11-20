@@ -17,25 +17,25 @@ public final class Employee extends User implements Timestamp {
     private LocalDateTime lastLoginAt;
     private final TimestampData timestamp;
 
-    public Employee(String id, String email, String phoneNumber, boolean isActive, String address,
-                    String firstName, String lastName, EmployeeRole employeeRole, String passwordHash, LocalDateTime lastLoginAt) {
+    public Employee(String id, String email, String phoneNumber, boolean isActive, String address, String firstName,
+                    String lastName, EmployeeRole employeeRole, String passwordHash, LocalDateTime lastLoginAt, TimestampData timestamp) {
         super(id, email, phoneNumber, isActive, address);
-        this.timestamp = new TimestampData();
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeRole = employeeRole;
         this.passwordHash = passwordHash;
         this.lastLoginAt = lastLoginAt;
+        this.timestamp = timestamp;
     }
 
     public Employee(Employee source) {
         super(source);
-        this.timestamp = source.timestamp;
         this.firstName = source.firstName;
         this.lastName = source.lastName;
         this.employeeRole = source.employeeRole;
         this.passwordHash = source.passwordHash;
         this.lastLoginAt = source.lastLoginAt;
+        this.timestamp = source.timestamp;
     }
 
     public String getLastName() {
