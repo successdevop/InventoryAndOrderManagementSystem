@@ -4,13 +4,15 @@ import com.sioms.models.baseModels.BusinessEntity;
 import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
+import java.util.UUID;
+
 
 public final class Supplier extends User {
     private int rating;
     private String paymentTerms;
     private final BusinessEntity businessEntity;
 
-    Supplier(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
+    Supplier(UUID id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
              int rating, String paymentTerms, BusinessEntity businessEntity) {
         super(id, email, phoneNumber, isActive, address, timestampData);
         this.rating = rating;

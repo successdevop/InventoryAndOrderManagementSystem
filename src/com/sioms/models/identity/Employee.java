@@ -5,6 +5,7 @@ import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
 public final class Employee extends User {
@@ -14,7 +15,7 @@ public final class Employee extends User {
     private String passwordHash;
     private LocalDateTime lastLoginAt;
 
-    Employee(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
+    Employee(UUID id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
              String firstName, String lastName, EmployeeRole employeeRole, String passwordHash, LocalDateTime lastLoginAt) {
         super(id, email, phoneNumber, isActive, address, timestampData);
         this.firstName = firstName;

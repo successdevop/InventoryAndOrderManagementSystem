@@ -5,11 +5,12 @@ import java.time.LocalDateTime;
 
 public class TimestampData {
     private final LocalDateTime createdAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     public TimestampData(){
-        createdAt = LocalDateTime.now();
-        updateAt = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
+        createdAt = now;
+        updatedAt = now;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -17,18 +18,18 @@ public class TimestampData {
     }
 
     public LocalDateTime getUpdateAt() {
-        return updateAt;
+        return updatedAt;
     }
 
     public void recordNewUpdate() {
-        this.updateAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     @Override
     public String toString() {
         return "TimestampData{" +
                 "createdAt=" + createdAt +
-                ", updateAt=" + updateAt +
+                ", updateAt=" + updatedAt +
                 '}';
     }
 }

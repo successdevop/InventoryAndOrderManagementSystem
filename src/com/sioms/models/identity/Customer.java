@@ -6,6 +6,7 @@ import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 
 public final class Customer extends User {
@@ -14,7 +15,7 @@ public final class Customer extends User {
     private final BusinessEntity businessEntity;
 
 
-    Customer(String id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
+    Customer(UUID id, String email, String phoneNumber, boolean isActive, String address, TimestampData timestampData,
              CustomerType customerType, BigDecimal totalPurchase, BusinessEntity businessEntity) {
         super(id, email, phoneNumber, isActive, address, timestampData);
         this.customerType = customerType;
