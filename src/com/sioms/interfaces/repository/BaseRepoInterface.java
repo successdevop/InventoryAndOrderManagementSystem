@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public interface BaseRepo<T, ID>{
+public interface BaseRepoInterface<T, ID>{
     void save(T entity);
 
     Optional<T> findById(ID id);
