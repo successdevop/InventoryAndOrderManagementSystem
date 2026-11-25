@@ -4,10 +4,11 @@ import com.sioms.models.baseModels.BusinessEntity;
 import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 
-public final class Supplier extends User {
+public final class Supplier extends User implements Serializable {
     private int rating;
     private String paymentTerms;
     private final BusinessEntity businessEntity;

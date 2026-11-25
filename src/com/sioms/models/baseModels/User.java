@@ -1,16 +1,19 @@
 package com.sioms.models.baseModels;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
 
-public abstract class User {
-    private final UUID id;
+public abstract class User implements Serializable {
+    private UUID id;
     private String email;
     private String phoneNumber;
     private boolean isActive;
     private String address;
-    private final TimestampData timestampData;
+    private TimestampData timestampData;
+
+    protected User(){}
 
     protected User(UUID id, String email, String phoneNumber, boolean isActive, String address,
                    TimestampData timestampData){

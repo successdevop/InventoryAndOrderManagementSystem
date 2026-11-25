@@ -1,9 +1,13 @@
 package com.sioms.models.baseModels;
 
-public class BusinessEntity{
+import java.io.Serializable;
+
+public class BusinessEntity implements Serializable {
     private String name;
     private String taxId;
     private String notes;
+
+    public BusinessEntity(){}
 
     public BusinessEntity(String name, String taxId, String notes) {
         this.name = name;

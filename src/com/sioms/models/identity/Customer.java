@@ -5,11 +5,12 @@ import com.sioms.models.baseModels.BusinessEntity;
 import com.sioms.models.baseModels.TimestampData;
 import com.sioms.models.baseModels.User;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
 
 
-public final class Customer extends User {
+public final class Customer extends User implements Serializable {
     private CustomerType customerType;
     private BigDecimal totalPurchase;
     private final BusinessEntity businessEntity;

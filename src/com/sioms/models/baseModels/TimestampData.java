@@ -1,9 +1,10 @@
 package com.sioms.models.baseModels;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 
-public class TimestampData {
+public class TimestampData implements Serializable {
     private final LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
